@@ -7,29 +7,27 @@ export const Statistics = ({
   bad,
   total,
   positivePercentage,
-}) => {
-  return (
-    <ListStatistics>
-      <li>
-        <p>Good: {good}</p>
-      </li>
-      <li>
-        <p>Neutral: {neutral}</p>
-      </li>
-      <li>
-        <p>Bad: {bad}</p>
-      </li>
-      <li>
-        <p>Total: {total}</p>
-      </li>
-      <li>
-        <PositiveFeedback result={positivePercentage}>
-          Positive feedback {positivePercentage}%
-        </PositiveFeedback>
-      </li>
-    </ListStatistics>
-  );
-};
+}) => (
+  <ListStatistics>
+    <li>
+      <p>Good: {good}</p>
+    </li>
+    <li>
+      <p>Neutral: {neutral}</p>
+    </li>
+    <li>
+      <p>Bad: {bad}</p>
+    </li>
+    <li>
+      <p>Total: {total}</p>
+    </li>
+    <li>
+      <PositiveFeedback result={positivePercentage}>
+        Positive feedback {positivePercentage}%
+      </PositiveFeedback>
+    </li>
+  </ListStatistics>
+);
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
